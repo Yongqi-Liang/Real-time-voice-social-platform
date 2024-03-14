@@ -1,0 +1,13 @@
+{
+    "name": "autoapp",
+    "version": "0.2.0",
+    "description": "Description of your app",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1" 
+    }
+  }
+  
