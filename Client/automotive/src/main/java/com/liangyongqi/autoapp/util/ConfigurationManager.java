@@ -2,6 +2,8 @@ package com.liangyongqi.autoapp.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.provider.Settings;
+import android.text.TextUtils;
 
 /**
  * File: ConfigurationManager.java

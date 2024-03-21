@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.liangyongqi.autoapp.util.CheckPermissions;
 import com.liangyongqi.autoapp.util.ConfigurationManager;
@@ -18,7 +19,7 @@ import com.liangyongqi.autoapp.util.PrivacyDialog;
 import com.liangyongqi.autoapp.util.UserSessionManager;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static int SPLASH_SCREEN_TIMEOUT = 3000; // 3 秒(启动页显示时间)
     String Uuid = ConfigurationManager.getUUID(getApplicationContext());
     String SessionId = ConfigurationManager.getSessionID(getApplicationContext());
     @Override
@@ -26,7 +27,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // 设置启动页布局
-        setContentView(R.layout.activity_main_splash);
+        setContentView(R.layout.activity_main);
+
+        // 首先显示启动页
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }, SPLASH_SCREEN_TIMEOUT);
+
         // 查询隐私政策同意状态的逻辑
         boolean isPrivacyAgreed = ConfigurationManager.isPrivacyAgreed(getApplicationContext());
         if (!isPrivacyAgreed){
