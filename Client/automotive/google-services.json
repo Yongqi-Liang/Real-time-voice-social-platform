@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "988925723096",
+    "project_id": "autoapp-44295",
+    "storage_bucket": "autoapp-44295.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988925723096:android:9475e0d486bf9b554272ad",
+        "android_client_info": {
+          "package_name": "com.liangyognqi.autoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpArRonIw_jUeZyw5Y3LpzU4doRZTJ-04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
