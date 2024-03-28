@@ -1,0 +1,125 @@
+/* 当前消息 */
+
+position: absolute;
+width: 267px;
+height: 66px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 语音按钮 */
+
+position: absolute;
+width: 93px;
+height: 94px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* ID */
+
+position: absolute;
+width: 218px;
+height: 48px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 精度/纬度 */
+
+position: absolute;
+width: 354px;
+height: 49px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 紧急联络 */
+
+position: absolute;
+width: 93px;
+height: 93px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 其他用户 */
+
+position: absolute;
+width: 967px;
+height: 391px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 用户信息_下拉框 */
+
+position: absolute;
+width: 250px;
+height: 150px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 用户信息 */
+
+position: absolute;
+width: 380px;
+height: 93px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
+
+/* 顶部导航 */
+
+position: absolute;
+width: 1280px;
+height: 49px;
+border-radius: 6px;
+opacity: 1;
+	
+background: #FFFFFF;
+	
+box-sizing: border-box;
+border: 1px solid rgba(0, 0, 0, 0.12);
+	
