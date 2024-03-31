@@ -1,66 +1,29 @@
-/**
- * @File: MainActivity.java
- * @Author: liangyongqi
- * @Email: 
- * @Date: 2024/3/12
- * @Time: 18:13
- */
 package com.liangyongqi.autoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.Window;
+import android.view.WindowManager;
+import com.xuexiang.xui.*;
 
-import com.liangyongqi.autoapp.util.CheckPermissions;
-import com.liangyongqi.autoapp.util.ConfigurationManager;
-import com.liangyongqi.autoapp.util.PrivacyDialog;
-import com.liangyongqi.autoapp.util.UserSessionManager;
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_SCREEN_TIMEOUT = 3000; // 3 秒(启动页显示时间)
-    String Uuid = ConfigurationManager.getUUID(getApplicationContext());
-    String SessionId = ConfigurationManager.getSessionID(getApplicationContext());
+    private static final int SPLASH_SCREEN_TIMEOUT = 3000; // 3秒启动页显示时间  
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        XUI.initTheme(this);
         super.onCreate(savedInstanceState);
-        // 设置启动页布局
-        setContentView(R.layout.activity_main);
 
-        // 首先显示启动页
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, SPLASH_SCREEN_TIMEOUT);
+        // 设置全屏显示，无标题栏  
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        // 查询隐私政策同意状态的逻辑
-        boolean isPrivacyAgreed = ConfigurationManager.isPrivacyAgreed(getApplicationContext());
-        if (!isPrivacyAgreed){
-            // 如果用户未同意隐私政策，则弹出隐私政策对话框
-            PrivacyDialog privacyDialog = new PrivacyDialog();
-            privacyDialog.showPrivacyDialog(MainActivity.this);
-        }
-        //调用CheckPermission.java中的检查权限的方法
-        CheckPermissions permissionsChecker = new CheckPermissions();
-        permissionsChecker.checkAndRequestLocationPermissions(MainActivity.this);//位置信息权限
-        permissionsChecker.checkAndRequestMicrophonePermissions(MainActivity.this);//麦克风权限
-        //采用SessionLogin方式登录
-        String sessionId = ConfigurationManager.getSessionID(getApplicationContext());
-        if (sessionId == null || sessionId.isEmpty()) {
-            // 如果 SessionId 为空，则跳转至登录页面
-            // 这里假设登录页面的 Activity 类名为 LoginActivity
-            Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(loginIntent);
-            finish(); // 结束当前 Activity
-        }
+        // 设置启动页布局  
+        setContentView(R.layout.activity_home);
 
-        UserSessionManager sessionManager = new UserSessionManager();
-        sessionManager.SessionLogin(getApplicationContext(), sessionId);
 
-        setContentView(R.layout.activity_main);
     }
 }
+

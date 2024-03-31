@@ -39,4 +39,11 @@ dependencies {
     //二维码生成相关依赖库
     implementation 'com.google.zxing:core:3.4.0'
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    //XUI相关依赖库
+    implementation 'com.github.xuexiangjys:XUI:1.0.9-support'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
 }
