@@ -11,7 +11,29 @@
 <body>
     <!-- video元素 -->
     <video autoplay controls id="video-local"></video>
+    <script>
+        $(document).ready(function(){
 
+            var socket = io('//');
+            console.log('try to connect...');
+            socket.on('connect',() => {
+                console.log('connect'+ socket.id);
+            })
+
+            // 修改网页程序，对网页加入js代码，实现对消息的发送及显示
+            $('form').submit(function(e){
+                e.preventDefault();
+                socket.emit('chat message',$('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('chat message',function(msg){
+                $('#messages').append($('<li>').text(msg))
+            });
+            
+        });
+        
+    </script>
     <script>
         // 封装一部分函数
         function getUserMedia(constrains, success,error){
