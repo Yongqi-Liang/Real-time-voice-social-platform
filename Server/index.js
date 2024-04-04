@@ -5,8 +5,8 @@ var io = require('socket.io')(https); //导入socket.io设置别名为io
 const fs = require('fs');
 
 let sslOptions = {
-        key: fs.readFileSync('privkey.key'),//里面的文件替换成你生成的私钥
-        cert: fs.readFileSync('cacert.pem')//里面的文件替换成你生成的证书
+        key: fs.readFileSync('./Cert/privkey.key'),//里面的文件替换成你生成的私钥
+        cert: fs.readFileSync('./Cert/cacert.pem')//里面的文件替换成你生成的证书
     };
     
 // 解析ip:port/static/到服务器static目录
