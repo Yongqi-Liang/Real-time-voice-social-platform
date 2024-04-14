@@ -1,0 +1,183 @@
+/* 通用样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 视频网格样式 */
+/* #video-grid {
+    display: flex;
+    justify-content: center;
+    border: 5px solid #36a4ed83; 
+    border-radius: 10px; 
+} */
+#video-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 视频元素样式 */
+/* video {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10%;
+    overflow: hidden;  防止视频内容溢出容器边界 
+    -webkit-mask-image: -webkit-radial-gradient(white, black); Webkit浏览器下设置遮罩 
+} */
+video {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* 主容器样式 */
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+/* 左侧区域样式 */
+.main-left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 右侧区域样式 */
+.main-right {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    background-color: #c8c8c8ce;
+    border-left: 1px solid #ffffff;
+}
+
+/* 视频区域样式 */
+/* .main-videos {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.main-videos {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 控制按钮区域样式 */
+.main-controls {
+    display: flex;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    justify-content: space-between;
+}
+
+/* 控制按钮块样式 */
+.main-controls-block {
+    display: flex;
+}
+
+/* 控制按钮样式 */
+.main-controls {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    height: 55px;
+}
+
+.main-controls-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 5px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* 控制按钮图标样式 */
+.main-controls-button i {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* 鼠标悬停样式 */
+.main-controls-button:hover {
+    background-color: #0056b3;
+}
+
+/* 离开按钮和特定类样式 */
+#leave, .red {
+    /* color: red; */
+    color: #ffffff;
+}
+
+/* 主标题样式 */
+.main-header {
+    color: #161212;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* 聊天窗口样式 */
+.main-chat-window {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* 消息容器样式 */
+.main-message-container {
+    padding: 22px 12px;
+    display: flex;
+}
+
+/* 消息表单样式 */
+.main-message-container form {
+    width: 100%;
+}
+
+/* 消息输入框样式 */
+.main-message-container input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 消息列表样式 */
+#messages {
+    font-size: 15px;
+    color: #000000;
+    padding: 10px;
+}
+
+/* 单条消息样式 */
+.message {
+    list-style-type: none;
+    padding: 10px;
+}
