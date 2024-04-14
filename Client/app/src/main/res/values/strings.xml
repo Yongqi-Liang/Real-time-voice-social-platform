@@ -1,0 +1,10 @@
+<!-- strings.xml -->
+<resources>
+    <string name="app_name">autolink0.3.1</string>
+    <string name="autotalk">
+        AutoTalk
+    </string>
+    <string name="username">
+        用户名获取出错
+    </string>
+</resources>
